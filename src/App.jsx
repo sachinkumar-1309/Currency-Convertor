@@ -3,10 +3,10 @@ import useCurrencyInfo from "./hooks/useCurrencyInfo";
 import InputBox from "./components/InputBox";
 
 function App() {
-  const [amount, setAmount] = useState('');
+  const [amount, setAmount] = useState("");
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("inr");
-  const [convertedAmount, setConvertedAmount] = useState('');
+  const [convertedAmount, setConvertedAmount] = useState("");
 
   const currencyInfo = useCurrencyInfo(from);
 
@@ -41,9 +41,9 @@ function App() {
                 label="From"
                 amount={amount}
                 currencyOptions={options}
-                onCurrencyChange={(currency) => setAmount(currency)}
+                onCurrencyChange={(currency) => setFrom(currency)}
                 selectCurrency={from}
-                onAmountChange={(amount)=>setAmount(amount)}
+                onAmountChange={(amount) => setAmount(amount)}
               />
             </div>
             <div className="relative w-full h-0.5">
